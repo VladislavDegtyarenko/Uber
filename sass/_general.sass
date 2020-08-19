@@ -1,0 +1,448 @@
+header
+	position: relative
+	height: 50px
+
+nav
+	position: fixed
+	width: 100%
+	height: 50px
+	background-color: #212121
+	z-index: 5
+.hamburger
+	display: none
+
+.menu
+	display: flex
+	justify-content: space-between
+	padding: 13px 70px
+	margin: 0
+	list-style-type: none
+	&_link
+		font-size: 15px
+		font-weight: 300
+		color: #ffffff
+		&:hover
+			text-decoration: 
+			color: $main-color
+	&_item
+		border-right: 2px dotted #000
+		padding-right: 28px
+		&:last-child
+			border-right: none
+
+.subheader
+	position: absolute
+	top: 50px
+	width: 100%
+	height: 84px
+	background-color: rgba(0,0,0,0.6)
+	&_logo
+		display: block
+		max-width: 100%
+		margin-top: 16px
+		img
+			width: 100%
+	&_official
+		margin-top: 3px
+		font-size: 13px
+		font-weight: 100
+		text-align: left
+		color: rgba(255, 255, 255, 0.5)
+	&_call
+		margin-top: 19px
+		font-size: 12px
+		font-weight: 300
+		text-align: right
+		color: #ffffff
+	&_phone
+		display: block
+		margin-top: 8px
+		font-weight: 400
+		text-transform: uppercase
+		font-size: 22px
+		text-align: right
+		color: #ffffff
+		line-height: 12px
+	&_btn
+		@include btn
+		margin-top: 19px
+		width: 100%
+		height: 46px
+		font-size: 14px
+
+.promo
+	min-height: 800px
+	background: url('../img/bg1.png') center (center / cover) no-repeat
+	padding: 150px 0 135px 0
+	&_header
+		margin: 0
+		font-size: 60px
+		font-weight: bold
+		text-align: center
+		color: #ffffff
+		line-height: 48px
+		text-transform: uppercase
+	&_subheader
+		margin: 0
+		margin-top: 22px
+		font-size: 36px
+		font-weight: 900
+		text-align: center
+		color: #ffffff
+		line-height: 24px
+	&_desc
+		margin-top: 24px
+		font-size: 18px
+		line-height: 24px
+		text-align: center
+		color: #ffffff
+	&_btn
+		@include btn
+		margin: 0 auto
+		margin-top: 120px
+		font-size: 18px
+		width: 259px
+		height: 63px
+
+.label
+	@include label
+.title
+	@include title
+.subtitle
+	@include subtitle    
+
+.reasons
+	padding: 71px 0 65px 0
+	&_block
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 35px
+	&_round
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 26px
+		width: 113px
+		height: 113px
+		background-color: $main-color
+		border-radius: 100%
+	&_descr
+		width: 343px
+	&_subtitle
+		line-height: 21px
+		color: $main-color
+		font-size: 17px
+		font-weight: 400
+	&_text
+		color: #202020
+		font-size: 15px
+		font-weight: 300
+		line-height: 21px
+
+.label
+	position: relative
+	margin: 0 auto
+	height: 24px
+	width: 112px
+	padding: 5px 12px
+	background-color: #000000
+	color: #ffffff
+	font-size: 11px
+	font-weight: 300
+	text-transform: uppercase
+	text-align: center
+	z-index: 2
+	&_white 
+		background-color: #fff
+		color: #000
+	&_min 
+		width: 76px
+
+.title
+	position: relative
+	margin-bottom: 0
+	margin-top: 38px
+	color: #222222
+	font-size: 38px
+	line-height: 38px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	z-index: 2
+	&_white 
+		color: #fff
+
+.subtitle
+	position: relative
+	margin-top: 19px
+	color: #222222
+	font-size: 17px
+	font-weight: 400
+	text-align: center
+	z-index: 2
+	&_white 
+		color: #fff
+
+
+
+
+
+
+
+.mobile
+	min-height: 864px
+	padding-top: 48px
+	padding-bottom: 79px
+	background: $bg_pattern
+	.row
+		margin-top: 32px
+	&_item
+		margin: 0 auto 19px
+		padding: 90px 20px 0px
+		height: 280px
+		text-transform: uppercase
+		&_1
+			background: url('../img/c1.png')
+		&_2
+			background: url('../img/c2.png')
+		&_3
+			background: url('../img/c3.png')
+		&_4
+			background: url('../img/c4.png')
+		&_5
+			background: url('../img/c5.png')
+		&_6
+			background: url('../img/c6.png')
+		&_subtitle
+			padding: 0px 20px
+			font-size: 24px
+			line-height: 1.29
+			text-align: center
+			color: #ffffff
+		&_plus
+			display: block
+			position: absolute
+			width: 26px
+			height: 26px
+			border-radius: 100%
+			background-color: #000000
+			text-align: center
+			bottom: 55px
+			left: 50%
+			transform: translateX(-50%)
+			cursor: pointer
+			transition: .3s all
+			&:before
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				content: ""
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $main-color
+				transition: .3         s all
+			&:after
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				content: ""
+				display: block
+				width: 2px
+				height: 14px
+				background-color: $main-color
+				transition: .3         s all
+			&:hover
+				&:before , &:after
+					background-color: $second-color
+
+.choice
+	position: relative
+	padding-top: 57px 
+	background-color: $black_bg
+	height: 500px
+	.label
+		background-color: #ffffff
+		color: #000000
+	.title
+		color: #ffffff
+	.subtitle
+		color: #ffffff
+	&_car
+		position: absolute
+		top: 231px
+		left: 50%
+		transform: translateX(-50%)
+		max-width: 95%
+
+.choice_bg
+	background: $bg_pattern
+	padding: 217px 0 138px
+	height: 397px
+	.choice_text
+		display: block
+		font-size: 17px
+		font-weight: 300
+		line-height: 1.41
+		letter-spacing: normal
+		text-align: center
+		color: #222222
+
+.rules
+	padding: 68px 0px 48px
+	.rules_block
+		margin-top: 32px
+		margin-bottom: 30px
+	.warning
+		.rules_title
+			color: $second-color
+		.rules_text
+			&::before
+				background-image: url(../img/red.png)
+			
+	&_title
+		@include rules
+		font-size: 22px
+		font-weight: normal
+		color: $main-color
+		margin-left: 8px
+		line-height: 16px
+	&_text
+		position: relative
+		@include rules
+		margin-left: 58px
+		&::before
+			content: ""
+			display: block
+			width: 21px
+			height: 20px
+			background-image: url('../img/blue.png')
+			position: absolute
+			left: -30px
+			top: 2px
+	&_subtext
+		color: $main-color
+		margin-top: 8px
+		margin-left: 8px
+
+	
+
+.world
+	.label
+		background-color: #ffffff
+		color: #000000
+	.title
+		color: #ffffff
+	.subtitle
+		color: #ffffff
+	height: 717px
+	padding-top: 49px
+	background: $black_bg url('../img/world.png') center (center / cover) no-repeat
+	position: relative
+	&_look
+		position: absolute
+		font-size: 15px
+		text-align: center
+		color: #1fbad6
+		text-transform: uppercase
+		line-height: 14px
+		bottom: 50px
+		left: 50%
+		transform: translateX(-50%)
+		transition: .3s all
+		&:hover
+			text-decoration: inherit
+			color: #22ceec
+
+.footer
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&_social
+		display: flex
+		width: 25%
+		&_item
+			position: relative
+			display: block
+			background-color: #000
+			border-radius: 100%
+			width: 32px
+			height: 32px
+			margin-left: 5px
+			i
+				position: absolute
+				color: #fff
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+	.map
+		padding: 50px 0 30px
+		line-height: 1
+		.footer_main
+			display: flex
+			justify-content: space-between
+			padding: 0 10px
+			position: relative
+			width: 390px
+			&::before
+				content: ""
+				display: block
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				top: -30px
+				background-color:#40a9c1
+				width: 300px
+				height: 4px
+			.footer_mainlink
+				font-size: 15px
+				font-weight: 300
+				color: #070716
+				text-transform: uppercase
+				transition: .3s all
+				&:before
+					content: ""
+					display: block
+				&:hover
+					text-decoration: none
+					color: #22ceec
+		.footer_sub
+			display: flex
+			justify-content: space-between
+			margin-top: 15px
+			.footer_sublink
+				font-size: 11px
+				font-weight: 300
+				color: #999999
+				text-transform: uppercase
+				margin-top: 15px
+				transition: .3s all
+				&:hover
+					text-decoration: none
+					color: #22ceec
+		.footer_lang
+			margin: 19px auto 0px
+			a
+				font-size: 11px
+				text-transform: uppercase            
+				color: $main-color
+				display: block
+				text-align: center
+				transition: .3s all
+				&:hover
+					text-decoration: none
+	.apps
+		display: flex
+		justify-content: flex-end
+		width: 25%
+		a
+			margin-right: 5px
+			img
+				transition: .3s all
+				&:hover
+					filter: brightness(70%)
+.xs-visible
+	display: none
